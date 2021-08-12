@@ -1,6 +1,6 @@
 # simpleredirect
 
-A basic redirect server that can be used as a backend for GKE Ingress to redirect one domain to another on GCP.
+A basic redirect server written in go that can be used as a backend for GKE Ingress to redirect one domain to another on GCP.
 
 ## Features
 
@@ -27,7 +27,7 @@ docker build -t gabihodoroaga/simpleredirect .
 docker run --rm -it -p 8080:8080 gabihodoroaga/simpleredirect --redirect=t1.com:https://t2.com:302
 ```
 
-### deploy in kubernetes
+### deploy using kubernetes
 
 ```yaml
 apiVersion: apps/v1
